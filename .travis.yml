@@ -1,28 +1,14 @@
-{
-  "language": "node_js",
-  "os": [
-    "linux"
-  ],
-  "dist": "xenial",
-  "node_js": [
-    "stable"
-  ],
-  "branches": {
-    "only": [
-      "main"
-    ]
-  },
-  "cache": {
-    "directories": [
-      "node_modules"
-    ]
-  },
-  "deploy": [
-    {
-      "provider": "heroku",
-      "strategy": "api",
-      "app": "APP_NAME",
-      "api_key": "API_KEY"
-    }
-  ]
-}
+language: nodejs
+node_js: 15.0.1
+
+
+
+branches:
+  only:
+  - master
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: $HEROKU_KEY_API
+  app: karpenko-employees
