@@ -5,7 +5,7 @@ node_js: 15.0.1
 
 branches:
   only:
-  - master
+  - main
 
 deploy:
   provider: heroku
