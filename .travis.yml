@@ -1,6 +1,6 @@
-language: node_js
-node_js:
-  - "stable"
-cache:
-  directories:
-    - "node_modules"
+deploy:
+  provider: heroku
+  api_key: API_KEY
+  app:
+    master: my-app-staging
+    production: my-app-production
