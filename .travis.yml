@@ -1,6 +1,28 @@
-deploy:
-  provider: heroku
-  api_key: API_KEY
-  app:
-    master: my-app-staging
-    production: my-app-production
+{
+  "language": "node_js",
+  "os": [
+    "linux"
+  ],
+  "dist": "xenial",
+  "node_js": [
+    "stable"
+  ],
+  "branches": {
+    "only": [
+      "main"
+    ]
+  },
+  "cache": {
+    "directories": [
+      "node_modules"
+    ]
+  },
+  "deploy": [
+    {
+      "provider": "heroku",
+      "strategy": "api",
+      "app": "APP_NAME",
+      "api_key": "API_KEY"
+    }
+  ]
+}
